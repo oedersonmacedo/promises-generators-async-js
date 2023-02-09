@@ -9,6 +9,8 @@ sum(2, 2).then(function(a) {
     sum(4, 4).then(function(b) {
         sum(a, b).then(function(result) {
             console.log(result);
+            // expect output: 12
+            // the response after 3 secs
         });
     });
 });
