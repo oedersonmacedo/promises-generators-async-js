@@ -21,4 +21,6 @@ async(function* () {
     const b = yield sum(4, 4)
     const result = yield sum(a, b);
     console.log(result);
+    // expect output: 12
+    // the response after 3 secs
 });
