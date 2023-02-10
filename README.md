@@ -1,12 +1,22 @@
 # Promises, Generators and Async/Await
 
   - #### Promises
-      - The promises are objects reponsible for modeling asynchronous behavior, allowing their treatment in an easier and more direct way;
-      - To create a promise, just instantiate it, executing the resolve function in case of success, being handled by then;
-      - In case of failurethe reject function must be executed,being handled by means of catch;
-      - It's possible to centralize the handling of a promise by chaining its returns;
-      - We can execute several promises at the same time, returning after all succeed using Promise.all;
-      - We can also execute several promises at the same time, returning after the first succeeds using Promise.race, or if there is an error, it returns this one;
-      - We can also execute several promises at the same time, returning after the first one succeeds using Promise.any, just returning the first one successfully;
+    - The promises are objects reponsible for modeling asynchronous behavior, allowing their treatment in an easier and more direct way;
+    - To create a promise, just instantiate it, executing the resolve function in case of success, being handled by then;
+    - In case of failurethe reject function must be executed,being handled by means of catch;
+    - It's possible to centralize the handling of a promise by chaining its returns;
+    - We can execute several promises at the same time, returning after all succeed using Promise.all;
+    - We can also execute several promises at the same time, returning after the first succeeds using Promise.race, or if there is an error, it returns this one;
+    - We can also execute several promises at the same time, returning after the first one succeeds using Promise.any, just returning the first one successfully;
   - #### Generators
-  
+    - The generators make it possible to pause the execution of a given function, allowing the use of the event loop in a cooperative way;
+    - Generators use the next method to iterate over the available values during function execution;
+    - Upon encountering a yield, function execution is paused until the next method is invoked again;
+    - The return of the next method is an object containing value and done, following the iteration protocol;
+    - Through yield it's possible to return values similarly to return;
+    - In addition, it's also possible to send a value into the generator through the next method;
+    - The return method closes the generator and can return a specific value;
+    - The throw method throws an exception inside the generator, interrupting the flow of execution if the exception has not been handled properly;
+    - Where can generators be used?
+      - As generators implement the iteration protocol, it is possible to use them with Symbol.iterator in a simple way;
+      - Furthermore, it is possible to use generators to synchronize asynchronous calls in a similar way to async/await;
