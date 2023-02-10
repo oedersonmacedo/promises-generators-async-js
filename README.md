@@ -20,3 +20,11 @@
     - Where can generators be used?
       - As generators implement the iteration protocol, it is possible to use them with Symbol.iterator in a simple way;
       - Furthermore, it is possible to use generators to synchronize asynchronous calls in a similar way to async/await;
+  - #### Async/Await
+    - async/await facilitates interaction with asynchronous calls, waiting for a given promise to return;
+    - To handle possible exceptions associated with asynchronous calls, you can use a try/catch block;
+    - Is it possible to iterate using async/await? Yes;
+      - Through forEach, the async in the function will allow it to execute, but it executes asynchronously, that's, there cannot be a dependency below the forEach;
+      - Through the for of, creating a dependency chain, that's, the method called below the for, can depend, unlike forEach;
+      - It's possible to use the for-await-of block to iterate over a promise iterator;
+      - To use for-await-of it's necessary to use the --harmony-async-iteration flag in older versions of Node.js;
